@@ -165,15 +165,16 @@ h1 {
 
 h2 {
   font-size: 2.25rem;
-  font-family: var(--heading-typeface);
+  font-family: var(--body-typeface);
   margin-bottom: 1rem;
   color: var(--h2-color);
+  line-height: 1.3;
 }
 
 h3 {
   font-size: 1.325rem;
   margin-bottom: 1rem;
-  line-height: 1.3;
+  line-height: 1.2;
   color: var(--h3-color);
 }
 
