@@ -815,28 +815,20 @@ a:active {
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   /* Sidebar on Large Devices */
   .project-aside {
-    width: 35%;
-    height: 65vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5vh;
+    width: 100%;
     padding-right: 2rem;
   }
 
   /* Main Project Image Area on Large Devices */
   .project-details {
-    width: 65%;
+    width: 100%;
   }
 
-  .project-image {
-    min-height: 70vh;
-    /* TODO: Delete min-height if you want to remove space between project images on project pages on large devices. It is used for the demo page only. */
-  }
 
   .project-image-container {
     flex-direction: row;
