@@ -20,6 +20,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*
 
@@ -87,7 +88,7 @@ html {
 
 :root {
   --body-typeface: "Quicksand", sans-serif;
-  --heading-typeface: "Luckiest Guy", sans-serif;
+  --heading-typeface: "Paytone One", sans-serif;
   --project-title-typeface: "Ubuntu", sans-serif;
   --background-color: #FFF8F0;
   --background-color-about: #FFF8F0;
@@ -98,9 +99,9 @@ html {
   --h2-color: #E6693D;
   --h3-color: #000000;
   --h4-color: #E6693D;
-  --h5-color: #ba7878;
+  --h5-color: #000000;
   --h6-color: #000000;
-  --primary-text-color: #6593E9;
+  --primary-text-color: #000000;
   --holding-page-title-color: #ebedf0;
   --accent-color: #E6693D;
   --overlay-color: #E6693D;
@@ -109,7 +110,7 @@ html {
   --hyperlink-color: d8305c;
   --hyperlink-alternate-color: orangered;
   --hover-color: #111;
-  --visited-color: #6593E9;
+  --visited-color: #000000;
   --project-title-color: #d8305c;
   --project-sidebar-background-color: #FFF8F0;
   --project-sidebar-text-color: rgb(0, 0, 0);
@@ -127,6 +128,7 @@ body {
   color: var(--primary-text-color);
   background: var(--background-color);
   display: flex;
+  overflow-x: hidden;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -166,9 +168,9 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25rem=;
+  font-size: 2.25rem;
   font-family: var(--body-typeface);
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: rem;
   color: var(--h2-color);
   line-height: 1.3;
@@ -178,11 +180,12 @@ h3 {
   font-size: 1.325rem;
   margin-bottom: 1rem;
   line-height: 1.2;
+  font-weight: 300;
   color: var(--h3-color);
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: 3.3rem;
   font-family: var(--heading-typeface);
   margin-bottom: rem;
   color: var(--h2-color);
@@ -190,22 +193,42 @@ h4 {
 }
 
 h5 {
-  font-size: 1 rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
+  margin-top: 0.5rem;
   color: var(--h5-color);
+  font-weight: 300;
 }
 
 h6 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: var(--h6-color);
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 0.7rem;
+  margin-bottom: 2rem;
+  color: #E6693D;
 }
-
+h10{
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 1rem;
+  color: #E6693D;
+}
+h9{
+  font-size: 1.8rem;
+  font-weight: 100;
+  font-family: "Paytone One", sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #E6693D;
+}
 p {
   font-size: 1rem;
   line-height: 1.3;
   margin-bottom: 1rem;
   color: black;
+  font-weight: 300;
 }
 
 em {
@@ -217,6 +240,13 @@ em {
 }
 
 .hero-headline {
+  font-family: var(--heading-typeface); /* Adjust as needed */
+  font-size: 5rem; /* Adjust size as needed */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the text until it's revealed */
+  border-right: 2px solid; /* Creates a cursor effect */
+  width: fit-content; /* Adjust width to fit text */
+  animation: blink 0.7s step-end infinite; /* Blinking cursor animation */
   color: var(--overlay-color);
 }
 
@@ -239,12 +269,13 @@ em {
 /* Hyperlink Styles */
 
 a:link {
-  color: var(--hyperlink-color);
+  color: #E6693D;
   text-decoration: none;
 }
 
 a:visited {
-  color: var(--visited-color);
+  color: #E6693D;
+
 }
 
 a:hover {
@@ -278,13 +309,13 @@ a:active {
 }
 
 .colored-link {
-  color: var(--hyperlink-alternate-color);
+  color: #000000;
 }
 
 .custom-navigation {
   font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  font-size: 27px
+  font-weight: 400;
+  font-size: 1.5rem;
   
 }
 
@@ -311,9 +342,10 @@ a:active {
 }
 
 .project-description {
-  font-size: 1.225rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-bottom: 2rem;
+  margin-right: 0rem;
 }
 
 /* Hero 
@@ -341,7 +373,7 @@ a:active {
 }
 
 .logo {
-  width: 3rem;
+  width: 10rem;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
@@ -391,6 +423,25 @@ a:active {
 .portfolio,
 .project-wrapper {
   padding: 0.25rem;
+}
+
+.portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+  gap: 20px; /* Adjusts the space between grid items */
+  padding: 20px; /* Optional: adds padding around the grid */
+}
+
+.work-page-grid-item img {
+  width: 100%; /* Ensures images fill the grid item */
+  height: auto; /* Maintains the aspect ratio of images */
+  display: block; /* Removes bottom whitespace */
+}
+
+@media (max-width: 768px) {
+  .portfolio .grid {
+    grid-template-columns: 1fr; /* Stacks items in one column on small screens */
+  }
 }
 
 /* Defining the work page grid */
@@ -524,30 +575,141 @@ a:active {
 ██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
                                                                                                
 */
+* body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bold {
+  font-weight: bold;
+  font-family: "Quicksand" sans-serif;
+}
+
+.container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the columns */
+  padding: 0;
+  margin: 0;
+}
+
+.column {
+  flex: 1; /* Allow columns to take equal space */
+  margin: 0 10px; /* Optional: Add some spacing between columns */
+}
+.column.project-overview{
+  padding: 0;
+  margin: 0;
+}
+.project-info {
+  min-width: 1200px; /* Optional: Limit the max width of the project info */
+  margin: 0 auto; /* Center align the project info */
+  padding: 2.5rem 0rem;
+}
+
+.project-overview, .project-details {
+  padding: 10px; /* Optional: Add padding to columns */
+}
+
+.link-orange {
+  background: none;             /* Remove background */
+  border: none;                 /* Remove border */
+  color: #E6693D;                /* Set text color to orange */
+  font-size: 1.5rem;
+  font-family: "Quicksand," sans-serif;
+  text-decoration: underline;    /* Underline the text */
+  cursor: pointer;              /* Change cursor to pointer */
+  padding: 0;                   /* Remove padding */
+}
+
+.link-orange:hover {
+  color: #000000;            /* Optional: Change color on hover */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFF8F0;
+  color: #333333;
+}
+
+header.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem;
+  background-color: #FFF8F0; /* Example background color */
+}
+
+.logo img {
+  max-width: 5rem; /* Adjust as necessary */
+  margin-top: 20px;
+  margin-left: 20px;
+  height: auto;
+}
+.branding-navigation a {
+  color: initial; /* Set initial color, adjust as needed */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.branding-navigation a:hover {
+  color: #000000; /* Change color to black on hover */
+}
+
+
+nav ul.branding-navigation {
+  display: flex;
+  list-style: none;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+nav ul.branding-navigation li {
+  margin-left: 55px; /* Adds space between the navigation items */
+}
+
+nav ul.branding-navigation li a {
+  text-decoration: none;
+  color: #E6693D;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+nav ul.branding-navigation li a:hover {
+  color: #000000; /* Example hover color */
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header.hero-header {
+    flex-direction: column;
+  }
+
+  nav ul.branding-navigation {
+    margin-top: 20px;
+  }
+
+  nav ul.branding-navigation li {
+    margin-left: 0;
+    margin-bottom: 10px; /* Stack items vertically */
+  }
+}
 
 .project-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex; /* Use flexbox for alignment */
+  margin: 0; /* Remove any margin */
+  padding: 0 6rem; /* Adjust padding if necessary */
 }
 
-/* Sidebar */
 .project-aside {
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  color: var(--project-sidebar-text-color);
-  background: var(--project-sidebar-background-color);
+  flex: 0 px; /* Set a fixed width if needed */
+  /* Remove any margin-left or set to zero */
+  margin-left: 0; /* Ensure it has no left margin */
 }
 
-.project-navigation {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  align-items: flex-end;
-  justify-content: space-between;
+.main {
+  flex-grow: 1; /* Allow the main content to take up remaining space */
+  /* Adjust any margins or paddings */
 }
+
 
 .arrow {
   padding: 0;
@@ -583,12 +745,86 @@ a:active {
   font-size: 3.25rem;
   padding: 3rem;
 }
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation-item {
+  padding: 0 4rem;
+  color: #E6693D;
+}
+
+.navigation-item a {
+  display: flex;
+  align-items: center; /* Center arrow and text */
+  text-decoration: none; /* Remove underline */
+  color: #E6693D; /* Change to your preferred color */
+  font-size: 1.5rem; /* Adjust size as needed */
+  margin-left: 0rem;
+}
+
+.navigation-item a i {
+  margin-left: 0.8rem; /* Space between text and arrow icon */
+  margin-right: 0.8rem;
+}
+
+.navigation-item i {
+  font-size: 2.2rem; /* Adjust this value to make the arrows thinner */
+  font-weight: 600;
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+/* Style for active navigation link */
+.custom-navigation.active {
+  text-decoration: underline; /* Adds underline */
+  text-decoration-thickness: 2px; /* Adjust thickness if needed */
+  text-underline-offset: 4px; /* Optional: Adjust underline spacing */
+  color: #E6693D; /* Change color if necessary */
+}
+/* Define the animation */
+@keyframes slideUp {
+  0% {
+      transform: translateY(20px); /* Start 20px below */
+      opacity: 0; /* Start invisible */
+  }
+  100% {
+      transform: translateY(0); /* End at original position */
+      opacity: 1; /* End fully visible */
+  }
+}
+
+/* Apply animation to project images */
+.project-image {
+  animation: slideUp 0.5s ease forwards; /* Animation properties */
+  opacity: 0; /* Set initial opacity to 0 for fade effect */
+  animation-delay: 0s; /* Default delay */
+}
+
+/* Optional: Add a delay for each image for staggered effect */
+.project-image:nth-child(1) {
+  animation-delay: 0.1s; /* First image appears after 0.1s */
+}
+
+.project-image:nth-child(2) {
+  animation-delay: 0.2s; /* Second image appears after 0.2s */
+}
+
+.project-image:nth-child(3) {
+  animation-delay: 0.3s; /* Third image appears after 0.3s */
+}
+
+
+
 
 /* Main Project Image Area */
 
 .project-details {
   width: 100%;
-  padding: 1rem;
+  padding: 0rem;
   /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
   background-image: linear-gradient(
     -225deg,
@@ -596,6 +832,30 @@ a:active {
     var(--linear-gradient-color-2) 50%,
     var(--linear-gradient-color-3) 100%
   );
+}
+.project-image {
+  margin-bottom: 1rem; /* Adds space below each image */
+}
+
+.project-image img {
+  display: block; /* Ensures that margin is applied correctly */
+  margin: 0 auto; /* Centers the images if they are in a block context */
+}
+.project-description{
+  margin-bottom: 0.93rem;
+}
+.column.project-details{
+  margin-top: 1.9rem;
+  margin-left: 0rem;
+  padding-left: 5rem;
+}
+.column.project-overview{
+  margin-right: 1rem;
+}
+.project-image.enlarged img {
+  width: 1600px;  /* Change this to your desired width */
+  height: auto;   /* Maintain aspect ratio */
+  margin-bottom: 2rem; /* Retain margin from your previous styles */
 }
 
 /* 
@@ -686,6 +946,65 @@ a:active {
 ██      ██ ███████ ██████  ██ ██   ██      ██████   ██████  ███████ ██   ██ ██ ███████ ███████ 
 
 */
+@media (max-width: 768px) {
+  /* Keep the header layout as row */
+  header.hero-header {
+    flex-direction: row;
+    justify-content: space-between; /* Keep logo left, nav right */
+  }
+  nav ul.branding-navigation li a {
+    font-size: 20px; /* Smaller font size for mobile */
+    padding: 5px 10px; /* Adjust padding for a better touch target */
+  }
+
+  /* Ensure the navigation stays in a row on smaller screens */
+  nav ul.branding-navigation {
+    flex-direction: row;
+    gap: 10px; /* Decrease the gap between nav items on small screens */
+  margin-top: 40px;
+  }
+  .logo {
+    max-width: 95px; /* New size for mobile */
+  }
+  /* Adjusting the project info and description for mobile */
+  .project-info {
+    width: 100%; /* Make it take full width on mobile */
+    padding: 15px; /* Add padding to avoid text touching edges */
+    margin: 0;
+  }
+.project-info h4{
+  font-size: 2.7rem;
+  line-height: 2.7rem;
+}
+  .project-description {
+    font-size: 1.31rem; /* Reduce font size for readability */
+    line-height: 1.2; /* Increase line spacing for better readability */
+    margin-bottom: 1rem; /* Add margin between sections */
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+    margin-right: 1rem;
+
+  }
+  .project-info h6 {
+    margin-top: 0.8rem;
+    font-size: 1.7rem; /* Adjust this value as needed */
+  
+  }
+
+  .project-info h4 .seasonal-posters {
+    display: block;  /* Forces "Seasonal Posters" onto a new line */
+    font-size: 2.7rem;
+  }
+
+.navigation-item{
+  padding: 0rem;
+}
+  .navigation-item a{
+    font-size: 1.31rem;          /* Smaller font size for mobile */
+    margin: 0 0px;             /* Adjust margin for spacing */
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
 
@@ -704,8 +1023,8 @@ a:active {
   }
 
   h1 {
-    font-size: 6rem;
-    margin-bottom: -1.7rem;
+    font-size: 5rem;
+    margin-bottom: 1rem;
   }
 
   h2 {
@@ -726,7 +1045,7 @@ a:active {
     font-size: 27px;
   }
   .logo {
-    width: 15rem;
+    width: 20rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -821,7 +1140,7 @@ a:active {
   /* Sidebar on Large Devices */
   .project-aside {
     width: 100%;
-    padding-right: 2rem;
+    padding-right: 0rem;
   }
 
   /* Main Project Image Area on Large Devices */
