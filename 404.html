@@ -1,66 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
-      Free Creative Portfolio Template: Mar 2024 Version | Work Page
-    </title>
-    <meta
-      name="description"
-      content="When writing a meta description, keep it between 140 and 160 characters so Google can display your entire message. Don’t forget to include your keyword!" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="screenshot.jpg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <script
-      src="https://kit.fontawesome.com/d300c2ea15.js"
-      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/style.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change Loop</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* Optional background */
+        }
+        .color-box {
+            width: 100%; /* Full width */
+            max-width: 300px; /* Max width */
+            height: 200px; /* Fixed height */
+            background-color: #E6693D; /* Initial color */
+            transition: background-color 1s; /* Smooth transition */
+            border-radius: 8px; /* Optional rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        }
+    </style>
+</head>
+<body>
 
-  <body class="error-page">
-    <section class="hero">
-      <header class="hero-header">
-        <ul class="branding-navigation">
-          <li><a href="work.html" class="custom-navigation">Work</a></li>
-          <li class="logo">
-            <a href="index.html"
-              ><img
-                src="assets/branding-images/logo.svg"
-                alt="Describe your image"
-            /></a>
-          </li>
-          <li><a href="about.html" class="custom-navigation">About</a></li>
-        </ul>
-      </header>
-      <div class="hero-headline-wrapper">
-        <h1 class="error-page-title">404 File Not Found</h1>
-        <h2>Create a custom error page that matches your personal brand.</h2>
-        <p>
-          The best 404 pages have become an art in themselves. Clever 404 pages
-          almost act like Easter eggs &mdash; hidden treats buried in a site
-          &mdash; and that feeling of having found something unique can overcome
-          the user's frustration of not getting to the page they wanted.
-        </p>
-        <p>
-          See:
-          <a
-            href="https://www.creativebloq.com/web-design/best-404-pages-812505"
-            >The best 404 pages for clever web design inspiration</a
-          >
-        </p>
-      </div>
-      <footer class="hero-footer">
-        <ul class="hero-footer-navigation">
-          <li><a href="#" class="custom-navigation">Instagram</a></li>
-          <li>
-            <a href="mailto:james@magnetude.com" class="custom-navigation"
-              >Email</a
-            >
-          </li>
-        </ul>
-      </footer>
-    </section>
-  </body>
+    <div class="color-box"></div> <!-- Box to change color -->
+
+    <script>
+        const box = document.querySelector('.color-box'); // Select the box element
+
+        function changeColor() {
+            // Check current color and toggle
+            if (box.style.backgroundColor === 'rgb(230, 105, 61)') { // Convert #E6693D to RGB
+                box.style.backgroundColor = '#6593E9'; // Change to new color
+            } else {
+                box.style.backgroundColor = '#E6693D'; // Change back to original color
+            }
+        }
+
+        // Change color initially
+        setInterval(changeColor, 10000); // Change color every 30 seconds
+    </script>
+
+</body>
 </html>

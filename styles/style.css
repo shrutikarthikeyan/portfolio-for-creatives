@@ -161,14 +161,14 @@ svg {
 */
 
 h1 {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h1-color);
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-family: var(--body-typeface);
   font-weight: 300;
   margin-bottom: rem;
@@ -240,13 +240,6 @@ em {
 }
 
 .hero-headline {
-  font-family: var(--heading-typeface); /* Adjust as needed */
-  font-size: 5rem; /* Adjust size as needed */
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide the text until it's revealed */
-  border-right: 2px solid; /* Creates a cursor effect */
-  width: fit-content; /* Adjust width to fit text */
-  animation: blink 0.7s step-end infinite; /* Blinking cursor animation */
   color: var(--overlay-color);
 }
 
@@ -414,9 +407,17 @@ a:active {
  ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
 
 */
+.hero-headline-wrapper {
+  padding-top: 20px !important;
+  padding-bottom: 30px !important;
+}
+
+
 
 .work-wrapper {
   flex: 1;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 /* Padding around work grid and project page */
@@ -436,6 +437,7 @@ a:active {
   width: 100%; /* Ensures images fill the grid item */
   height: auto; /* Maintains the aspect ratio of images */
   display: block; /* Removes bottom whitespace */
+  border-radius: 20px;
 }
 
 @media (max-width: 768px) {
@@ -483,6 +485,154 @@ a:active {
   visibility: visible;
   opacity: 0.8;
 }
+.work-page .portfolio .grid .work-page-grid-item img {
+  border-radius: 30px; /* Adjust this value to control the rounding */
+  overflow: hidden;
+}
+/* Target the grid container for project images */
+.work-page .portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 3 equal-width columns */
+  gap: 20px; /* Adds space between grid items */
+}
+/* Style for social media icons */
+.social-icons i {
+  font-size: 2.2rem; /* Adjust size as needed */
+  margin: 0 0px; /* Adds space between icons */
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap:15px; /* Space between icons */
+  margin-top: 15px;
+}
+
+.icon-link {
+  color: #000000; /* Adjust color as needed */
+  font-size: 24px; /* Adjust size as needed */
+  transition: color 0.3s;
+}
+
+.icon-link:hover {
+  color: #000000; /* Add hover color; adjust as needed */
+}
+.hero-headline-wrapper{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.typewriter {
+  display: inline-block;
+  color: #E6693D; /* Initial Typewriter Text Color */
+  font-size: 4rem;
+  line-height: 5rem;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid; /* Blinking cursor */
+  animation: typing 12s steps(30, end) infinite, blink-caret 0.5s step-end infinite, color-change 12s infinite; /* Add color-change animation */
+}
+
+/* Typewriter typing and erasing effect with 6-second pauses */
+@keyframes typing {
+  0% { width: 0; }
+  45% { width: 100%; } /* Type out the text */
+  60% { width: 100%; } /* Pause for 6 seconds */
+  20% { width: 0; } /* Slowly erase the text */
+  100% { width: 0; } /* Pause for another 6 seconds before restarting */
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+.link-button {
+  background: none; /* Remove default button background */
+  color: #E6693D;
+  border: none; /* Remove default border */
+  font-size: inherit;
+  font-weight: inherit; /* Inherit the weight of the surrounding text */
+  cursor: pointer; /* Show pointer on hover */
+  padding: 0; /* Remove padding */
+}
+
+.link-button:hover {
+  color: #000000; /* Change color on hover */
+  text-decoration: none; /* Optionally remove underline on hover */
+}
+/* Tilt effect on click */
+.link-button:active {
+  transform: rotate(-5deg); /* Rotate slightly on click */
+}
+.custom-navigation {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease; /* Transition effect */
+}
+
+.custom-navigation:active {
+  transform: rotate(-20deg); /* Tilt effect */
+}
+.image-container {
+  position: relative;
+  overflow: hidden; /* Ensures the overlay doesn't extend outside the image */
+  border-radius: 25px;
+}
+
+.image-container img {
+  display: block; /* Removes the bottom space/gap */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Black background with transparency */
+  display: flex; /* Center text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.image-container:hover img {
+  opacity: 0.75; /* Darken image on hover */
+}
+
+.overlay-text {
+  color: #FFF8F0; /* Text color */
+  font-size: 3rem; /* Adjust size as needed */
+  font-family: "Paytone One", sans-serif;
+  text-align: center; /* Center the text */
+}
+.additional-text {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #FFF8F0; /* Change color as desired */
+  margin-top:0.5rem; /* Space between the overlay text and additional text */
+}
+.color-box {
+  width: 100%; /* Full width */
+  max-width: 300px; /* Max width for larger screens */
+  height: 200px; /* Fixed height */
+  background-color: #E6693D; /* Initial color */
+  transition: background-color 1s; /* Smooth transition for color change */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Soft shadow */
+}
+
+
 
 /* 
 
@@ -1023,8 +1173,8 @@ nav ul.branding-navigation li a:hover {
   }
 
   h1 {
-    font-size: 5rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 0rem;
   }
 
   h2 {
@@ -1033,7 +1183,8 @@ nav ul.branding-navigation li a:hover {
   }
 
   h3 {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
     margin-bottom: 0rem
   }
   h4{
