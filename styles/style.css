@@ -1198,7 +1198,7 @@ nav ul.branding-navigation li a:hover {
 }
 h3 {
   font-size: 1.35rem;
-  padding: 0 0;
+  padding: 0 1vh;
   line-height: 1.7rem;
   margin-bottom: 0rem;
   text-align: center;
@@ -1209,6 +1209,11 @@ h3 {
   font-size: 1.35rem;
   line-height: 1.7rem;
   text-align: center;
+}
+.work-page .portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Creates 3 equal-width columns */
+  gap: 20px; /* Adds space between grid items */
 }
 }
 @media (min-width: 468px) {
