@@ -1181,7 +1181,7 @@ nav ul.branding-navigation li a:hover {
 ██      ██ ███████ ██████  ██ ██   ██      ██████   ██████  ███████ ██   ██ ██ ███████ ███████ 
 
 /* Default styles for small devices */
-@media (min-width: 480px) {
+@media (min-width: 200px) {
 .typewriter{
   font-size: 3.2rem;
   margin-bottom: 0rem;
