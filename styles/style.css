@@ -1204,26 +1204,27 @@ nav ul.branding-navigation li a:hover {
 
 */
 @media (max-width: 768px) {
-  .image-container{
+  .image-container {
     border-radius: 20px;
   }
-    .portfolio .grid {
-      display: flex;
-      flex-direction: column;
-    }
-  
+
+  .portfolio .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
   .work-page-grid-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center items */
     width: 100%; /* Ensure each item takes full width */
   }
-  .image-container img {
 
+  .image-container img {
     width: 100%; /* Ensure images are responsive */
     height: auto; /* Maintain aspect ratio */
   }
-  
+
   .link-button {
     background: none; /* Remove default button background */
     color: #E6693D;
@@ -1233,30 +1234,41 @@ nav ul.branding-navigation li a:hover {
     font-weight: 400; /* Inherit the weight of the surrounding text */
     cursor: pointer; /* Show pointer on hover */
     padding: 0; /* Remove padding */
+    text-align: left; /* Align text to the left */
   }
+
   h3 {
     font-size: 1.4rem; /* Smaller font size for h3 */
     line-height: 1.8rem;
     margin-bottom: 0;
-    text-align: center;
-}
-h1{
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
+    text-align: left; /* Align to the left */
+  }
+
+  h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: left; /* Align to the left */
+    padding-left: 0;
+    margin-left: 0;
+  }
+
   .typewriter {
     display: inline-block;
     color: #E6693D; /* Initial Typewriter Text Color */
     font-size: 3rem;
     line-height: 4.35rem;
+    text-align: left; /* Align to the left */
     margin-bottom: 0rem;
     padding-bottom: 0rem;
+    padding-left: 0rem;
+    margin-left: 0rem;
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     border-right: 4px solid; /* Blinking cursor */
     animation: typing 9s steps(30, end) infinite, blink-caret 0.5s step-end infinite, color-change 8s infinite; /* Add color-change animation */
   }
+
   /* Keep the header layout as row */
   header.hero-header {
     flex-direction: row;
@@ -1264,6 +1276,7 @@ h1{
     margin-bottom: 0rem;
     padding-bottom: 0rem;
   }
+
   nav ul.branding-navigation li a {
     font-size: 20px; /* Smaller font size for mobile */
     padding: 5px 10px; /* Adjust padding for a better touch target */
@@ -1273,35 +1286,39 @@ h1{
   nav ul.branding-navigation {
     flex-direction: row;
     gap: 10px; /* Decrease the gap between nav items on small screens */
-  margin-top: 40px;
+    margin-top: 40px;
   }
+
   .logo {
     max-width: 95px; /* New size for mobile */
   }
+
   /* Adjusting the project info and description for mobile */
   .project-info {
     width: 100%; /* Make it take full width on mobile */
     padding: 15px; /* Add padding to avoid text touching edges */
     margin: 0;
   }
-.project-info h4{
-  font-size: 2.7rem;
-  line-height: 2.7rem;
-}
+
+  .project-info h4 {
+    font-size: 2.7rem;
+    line-height: 2.7rem;
+    text-align: left; /* Align to the left */
+  }
+
   .project-description {
     font-size: 1.31rem; /* Reduce font size for readability */
     line-height: 1.2; /* Increase line spacing for better readability */
     margin-bottom: 0rem; /* Add margin between sections */
     word-wrap: normal;
     overflow-wrap: break-word;
-    text-align: left;
+    text-align: left; /* Align to the left */
     margin-right: 2rem;
-
   }
+
   .project-info h6 {
     margin-top: 0.8rem;
     font-size: 1.7rem; /* Adjust this value as needed */
-  
   }
 
   .project-info h4 .seasonal-posters {
@@ -1309,31 +1326,43 @@ h1{
     font-size: 2.7rem;
   }
 
-.navigation-item{
-  padding: 0rem;
-}
-  .navigation-item a{
-    font-size: 1.31rem;          /* Smaller font size for mobile */
-    margin: 0 0px;             /* Adjust margin for spacing */
+  .navigation-item {
+    padding: 0rem;
   }
+
+  .navigation-item a {
+    font-size: 1.31rem; /* Smaller font size for mobile */
+    margin: 0 0px; /* Adjust margin for spacing */
+  }
+
   .work-page .portfolio .grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Creates 3 equal-width columns */
+    grid-template-columns: repeat(1, 1fr); /* Creates 1 equal-width column */
     gap: 20px; /* Adds space between grid items */
   }
-.hero-headline-wrapper{
-  padding-bottom: 0rem;
-  margin-bottom: 0rem;
+
+  .hero-headline-wrapper {
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+    padding: 2.1rem;
+    text-align: left; /* Align text to the left */
+  }
+
+  .work-wrapper {
+    margin-top: 0rem;
+    padding-top: 0rem;
+  }
+
+  .portfolio {
+    margin-top: 0rem;
+    padding-top: 0rem;
+  }
+  .header-text{
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
-.work-wrapper{
-  margin-top: 0rem;
-  padding-top: 0rem;
-}
-.portfolio{
-  margin-top: 0rem;
-  padding-top: 0rem;
-}
-}
+
 
 /* Medium devices (tablets, 768px and up) */
 
