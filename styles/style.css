@@ -1197,16 +1197,17 @@ nav ul.branding-navigation li a:hover {
   height: 4rem;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   padding: 0 0;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
   margin-bottom: 0rem;
   text-align: center;
   margin-left: 0;
+  margin-right: 0;
 }
 .link-button{
-  font-size: 1.5rem;
-  line-height: 1.8rem;
+  font-size: 1.35rem;
+  line-height: 1.7rem;
   text-align: center;
 }
 }
