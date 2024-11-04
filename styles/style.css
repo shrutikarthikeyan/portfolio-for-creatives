@@ -167,7 +167,7 @@ svg {
 h1 {
   font-size: 1rem;
   font-family: var(--heading-typeface);
-  margin-bottom: 1rem;
+  margin-bottom: 0.16rem;
   color: var(--h1-color);
 }
 
@@ -181,7 +181,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.57rem;
+  padding: 0 25rem;
   font-family: "Quicksand", sans-serif;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -887,30 +888,7 @@ nav ul.branding-navigation li a {
 nav ul.branding-navigation li a:hover {
   color: #000000; /* Example hover color */
 }
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  header.hero-header {
-    flex-direction: column;
-  }
 
-  nav ul.branding-navigation {
-    margin-top: 20px;
-  }
-
-  nav ul.branding-navigation li {
-    margin-left: 0;
-    margin-bottom: 10px; /* Stack items vertically */
-  }
-
-.link-button {
-    width: 100%; /* Full width button on mobile */
-    font-size: 1em; /* Adjust button font size */
-}
-
-.social-icon-header {
-    font-size: 20px; /* Smaller icons for mobile */
-}
-}
 
 .project-wrapper {
   display: flex; /* Use flexbox for alignment */
@@ -1202,179 +1180,44 @@ nav ul.branding-navigation li a:hover {
 ██  ██  ██ ██      ██   ██ ██ ██   ██     ██ ▄▄ ██ ██    ██ ██      ██   ██ ██ ██           ██ 
 ██      ██ ███████ ██████  ██ ██   ██      ██████   ██████  ███████ ██   ██ ██ ███████ ███████ 
 
-*/
-@media (max-width: 768px) {
-  .image-container {
-    border-radius: 20px;
-  }
-
-  .portfolio .grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .work-page-grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items */
-    width: 100%; /* Ensure each item takes full width */
-  }
-
-  .image-container img {
-    width: 100%; /* Ensure images are responsive */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .link-button {
-    background: none; /* Remove default button background */
-    color: #E6693D;
-    border: none; /* Remove default border */
-    font-family: "Quicksand", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400; /* Inherit the weight of the surrounding text */
-    cursor: pointer; /* Show pointer on hover */
-    padding: 0; /* Remove padding */
-    text-align: left; /* Align text to the left */
-  }
-
-  h3 {
-    font-size: 1.4rem; /* Smaller font size for h3 */
-    line-height: 1.8rem;
-    margin-bottom: 0;
-    text-align: left; /* Align to the left */
-  }
-
-  h1 {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    text-align: left; /* Align to the left */
-    padding-left: 0;
-    margin-left: 0;
-  }
-
-  .typewriter {
-    display: inline-block;
-    color: #E6693D; /* Initial Typewriter Text Color */
-    font-size: 3rem;
-    line-height: 4.35rem;
-    text-align: left; /* Align to the left */
-    margin-bottom: 0rem;
-    padding-bottom: 0rem;
-    padding-left: 0rem;
-    margin-left: 0rem;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid; /* Blinking cursor */
-    animation: typing 9s steps(30, end) infinite, blink-caret 0.5s step-end infinite, color-change 8s infinite; /* Add color-change animation */
-  }
-
-  /* Keep the header layout as row */
-  header.hero-header {
-    flex-direction: row;
-    justify-content: space-between; /* Keep logo left, nav right */
-    margin-bottom: 0rem;
-    padding-bottom: 0rem;
-  }
-
-  nav ul.branding-navigation li a {
-    font-size: 20px; /* Smaller font size for mobile */
-    padding: 5px 10px; /* Adjust padding for a better touch target */
-  }
-
-  /* Ensure the navigation stays in a row on smaller screens */
-  nav ul.branding-navigation {
-    flex-direction: row;
-    gap: 10px; /* Decrease the gap between nav items on small screens */
-    margin-top: 40px;
-  }
-
-  .logo {
-    max-width: 95px; /* New size for mobile */
-  }
-
-  /* Adjusting the project info and description for mobile */
-  .project-info {
-    width: 100%; /* Make it take full width on mobile */
-    padding: 15px; /* Add padding to avoid text touching edges */
-    margin: 0;
-  }
-
-  .project-info h4 {
-    font-size: 2.7rem;
-    line-height: 2.7rem;
-    text-align: left; /* Align to the left */
-  }
-
-  .project-description {
-    font-size: 1.31rem; /* Reduce font size for readability */
-    line-height: 1.2; /* Increase line spacing for better readability */
-    margin-bottom: 0rem; /* Add margin between sections */
-    word-wrap: normal;
-    overflow-wrap: break-word;
-    text-align: left; /* Align to the left */
-    margin-right: 2rem;
-  }
-
-  .project-info h6 {
-    margin-top: 0.8rem;
-    font-size: 1.7rem; /* Adjust this value as needed */
-  }
-
-  .project-info h4 .seasonal-posters {
-    display: block;  /* Forces "Seasonal Posters" onto a new line */
-    font-size: 2.7rem;
-  }
-
-  .navigation-item {
-    padding: 0rem;
-  }
-
-  .navigation-item a {
-    font-size: 1.31rem; /* Smaller font size for mobile */
-    margin: 0 0px; /* Adjust margin for spacing */
-  }
-
-  .work-page .portfolio .grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Creates 1 equal-width column */
-    gap: 20px; /* Adds space between grid items */
-  }
-
-  .hero-headline-wrapper {
-    padding-bottom: 0rem;
-    margin-bottom: 0rem;
-    padding: 2.1rem;
-    text-align: left; /* Align text to the left */
-  }
-
-  .work-wrapper {
-    margin-top: 0rem;
-    padding-top: 0rem;
-  }
-
-  .portfolio {
-    margin-top: 0rem;
-    padding-top: 0rem;
-  }
-  .header-text{
-    margin-left: 0;
-    padding-left: 0;
-  }
+/* Default styles for small devices */
+@media (min-width: 480px) {
+.typewriter{
+  font-size: 3.2rem;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
+  text-align: center;
+  height: 4.6rem;
 }
+}
+/* Typewriting animation for h3 on mobile devices */
 
 
+h3 {
+  font-size: 1.5rem;
+  padding: 0 1vh;
+  line-height: 1.85rem;
+  margin-bottom: 0rem;
+  text-align: center;
+  margin-left: 0;
+}
+.link-button{
+  font-size: 1.5rem;
+  line-height: 1.85rem;
+  text-align: left;
+}
 /* Medium devices (tablets, 768px and up) */
-
 @media (min-width: 768px) {
-  /* TODO: Add styles here for medium devices. */
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 5vw; /* Responsive padding */
+    line-height: 1.9rem;
+    margin-bottom: 0;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
-
 @media (min-width: 992px) {
-  /* TODO: Add or adjust styles here for large devices. */
-
   .holding-page-title {
     font-size: 2rem;
     margin-bottom: 0.5rem;
@@ -1382,7 +1225,7 @@ nav ul.branding-navigation li a:hover {
 
   h1 {
     font-size: 4rem;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
 
   h2 {
@@ -1392,20 +1235,23 @@ nav ul.branding-navigation li a:hover {
 
   h3 {
     font-size: 1.57rem;
-    line-height: 1.9rem;
-    margin-bottom: 0rem
+    padding: 0 5vw; /* Responsive padding */
+    line-height: 2rem;
+    margin-bottom: 0;
   }
-  h4{
-    font-size: 2 rem;
+
+  h4 {
+    font-size: 2rem;
     margin-bottom: 0.2rem;
     line-height: 1.1;
   }
-  h5{
+
+  h5 {
     font-size: 27px;
   }
+
   .logo {
     width: 20rem;
-    /* TODO: Adjust the width of the logo on large devices here. */
   }
 
   .hero {
@@ -1418,12 +1264,11 @@ nav ul.branding-navigation li a:hover {
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    
   }
 
   /* Grayscale filter with full-colour on hover and tap */
   .work-page-grid-item a.grayscale img {
-    filter: grayscale(100);
+    filter: grayscale(100%);
   }
 
   .work-page-grid-item > a.grayscale:active img,
@@ -1441,43 +1286,25 @@ nav ul.branding-navigation li a:hover {
     grid-template-columns: 1fr 1fr;
   }
 
-  .about-item-1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
+  .about-item-1,
   .footer-item-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
 
-  .about-item-2 {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
+  .about-item-2,
   .footer-item-2 {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
 
-  .about-item-3 {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  }
-
+  .about-item-3,
   .footer-item-3 {
     grid-row: 1 / 2;
     grid-column: 3 / 4;
   }
 
-  .about-item-4 {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
-    text-align: center;
-    align-self: end;
-  }
-
+  .about-item-4,
   .footer-item-4 {
     grid-row: 2 / 3;
     grid-column: 1 / 4;
@@ -1488,7 +1315,7 @@ nav ul.branding-navigation li a:hover {
   /* Padding around work grid and project page */
   .portfolio,
   .project-wrapper {
-    padding: 0.5 rem;
+    padding: 0.5rem;
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -1499,14 +1326,13 @@ nav ul.branding-navigation li a:hover {
   /* Sidebar on Large Devices */
   .project-aside {
     width: 100%;
-    padding-right: 0rem;
+    padding-right: 0;
   }
 
   /* Main Project Image Area on Large Devices */
   .project-details {
     width: 100%;
   }
-
 
   .project-image-container {
     flex-direction: row;
@@ -1519,35 +1345,239 @@ nav ul.branding-navigation li a:hover {
   .arrow {
     padding-right: 1rem;
   }
-
 }
 
-/* X-Large devices (large desktops, 1200px and up)*/
-
-@media (min-width: 1200px) {
-  /* TODO: Add styles here for X-large devices. */
-
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 850px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
+.typewriter{
+  font-size: 4rem;
+  height: 4.95rem;
 }
-.project-description{
-  margin-top: 0.45rem;
-  margin-bottom: 0rem;
+  h3 {
+    font-size: 1.5rem;
+    padding: 0 3vw; /* Responsive padding */
+  }
 }
 
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
 
-/* XX-Large devices (larger desktops, 1400px and up) */
+  h3 {
+    font-size: 1.5rem;
 
-@media (min-width: 1400px) {
-  /* TODO: Add styles here for XX-large devices. */
+    padding: 0 5vw; /* Responsive padding */
+  }
+}
+@media (min-width: 950px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
 
+  h3 {
+    font-size: 1.5rem;
+    padding: 0 3vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    padding: 0 8vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    padding: 0 10vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1230px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    padding: 0 12vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1250px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    padding: 0 12vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1300px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    padding: 0 13vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1320px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 14vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1370px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 15vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1380px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 15vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1410px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 16vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1450px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-  .project-description{
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 16vw; /* Responsive padding */
   }
-  
+}
+@media (min-width: 1460px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 17vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1470px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 17vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1500px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 18vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1550px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 19vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 20vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1650px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 21vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1670px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 21vw; /* Responsive padding */
+  }
+}
+@media (min-width: 1680px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 21vw; /* Responsive padding */
+  }
+}
+
+@media (min-width: 1700px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 21.5vw; /* Responsive padding */
+  }
+}
+/* XXX-Large devices (larger desktops, 1500px and up) */
+@media (min-width: 1750px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  h3 {
+    font-size: 1.57rem;
+    padding: 0 23vw; /* Responsive padding */
+  }
 }
