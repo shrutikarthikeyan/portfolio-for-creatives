@@ -1182,6 +1182,13 @@ nav ul.branding-navigation li a:hover {
 
 /* Default styles for small devices */
 @media (min-width: 200px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    width: 100%;
+  }
+  
 .typewriter{
   font-size: 3.2rem;
   margin-bottom: 0rem;
