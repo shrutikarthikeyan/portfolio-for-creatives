@@ -1190,16 +1190,35 @@ nav ul.branding-navigation li a:hover {
   }
   
 .typewriter{
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
+  text-align: center;
+  height: 4.6rem;
+}
+h3 {
+  font-size: 1.3rem;
+  padding: 0 0vh;
+  line-height: 1.85rem;
+  margin-bottom: 0rem;
+  text-align: center;
+  margin-left: 0;
+}
+.link-button{
+  font-size: 1.3rem;
+  line-height: 1.85rem;
+  text-align: center;
+}
+}
+@media (min-width: 468px) {
+  
+.typewriter{
   font-size: 3.2rem;
   margin-bottom: 0rem;
   padding-bottom: 0rem;
   text-align: center;
   height: 4.6rem;
 }
-}
-/* Typewriting animation for h3 on mobile devices */
-
-
 h3 {
   font-size: 1.5rem;
   padding: 0 1vh;
@@ -1211,8 +1230,12 @@ h3 {
 .link-button{
   font-size: 1.5rem;
   line-height: 1.85rem;
-  text-align: left;
+  text-align: center;
 }
+}
+/* Typewriting animation for h3 on mobile devices */
+
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   h3 {
