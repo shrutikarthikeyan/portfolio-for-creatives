@@ -380,7 +380,6 @@ a:active {
   width: 10rem;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
-
 .hero-headline-wrapper {
   display: flex;
   flex-direction: column;
@@ -408,6 +407,40 @@ a:active {
   justify-content: space-between;
   padding: 1rem;
 }
+/* General styles for navbar */
+.navbar {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: flex-end; /* Aligns content to the right */
+  padding: 10px; /* Optional: adjust padding as needed */
+  background-color: #FFF8F0;
+  
+}
+
+.nav-container {
+  display: flex; /* Ensure nav items are aligned horizontally */
+}
+
+.nav-menu {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Align items in a row */
+  margin: 0; /* Reset margins */
+  padding: 0; /* Reset padding */
+}
+
+.nav-item {
+  margin-left: 20px; /* Space between menu items */
+}
+
+.custom-navigation {
+  text-decoration: none; /* Remove underline */
+  color: #FFF8F0; /* Adjust text color */
+  transition: color 0.3s; /* Optional: add transition for hover effect */
+}
+
+.custom-navigation:hover {
+  color: #FFD700; /* Change color on hover */
+}
+
 
 /* Work Page Layout
 
@@ -418,6 +451,7 @@ a:active {
  ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
 
 */
+
 .hero-headline-wrapper {
   padding-top: 20px !important;
   padding-bottom: 30px !important;
@@ -571,8 +605,7 @@ a:active {
 }
 
 .link-button:hover {
-  color: #000000; /* Change color on hover */
-  text-decoration: none; /* Optionally remove underline on hover */
+  color: #000000 !important/* Change color on hover */
 }
 /* Tilt effect on click */
 .link-button:active {
@@ -645,8 +678,12 @@ a:active {
   transition: background-color 1s; /* Smooth transition for color change */
   border-radius: 8px; /* Optional: Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Soft shadow */
+}.link-button:hover{
+  color: black !important
 }
-
+.custom-navigation:hover{
+  color: black !important
+}
 /* 
 
  █████  ██████   ██████  ██    ██ ████████ 
@@ -685,6 +722,14 @@ a:active {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
 }
+#menu-icon{
+  font-size: 3.8rem; /* Adjust this value to make it larger */
+ /* Optional: add padding to increase clickable area */
+ padding-top: 1.2rem;
+ padding-right: 0.5rem;
+  padding-bottom: 0rem;
+  cursor: pointer;
+}
 
 /* Global Footer
 
@@ -704,6 +749,27 @@ a:active {
   background: #E6693D;
   padding: 1rem;
 }
+.footer-item-1,
+.footer-item-2,
+.footer-item-3 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-item-4 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
 .footerbottom{
   margin-top: 1.2rem;
 }
@@ -714,12 +780,14 @@ a:active {
   .footer-item-2 {
     margin-left: auto;
     text-align: right; /* Ensures text within aligns correctly */
+    padding-left: 0rem;
+    margin-left: 0rem;
   }
 
   /* Styling for footer links */
   .footer-item-2 p {
     margin: 0; /* Remove default margins */
-    padding-left: 20rem;
+    padding-left: 0rem;
     color: #FFF8F0; /* Ensure consistent color */
   }
 
@@ -756,14 +824,15 @@ margin-left: 0px;
 justify-content: left;
 }
 .icon-link2 i {
-  margin-top: 2rem;
-  font-size: 3.5rem; /* Adjust this value as needed */
-  padding-right: 0.25rem;
+  margin-top: 2.85rem;
+  font-size: 6rem; /* Adjust this value as needed */
+  padding-right: 0.4rem;
 }
 .footer-item-2{
   margin-right: 0rem;
   padding-right: 0rem;
-  margin-top: 0.5rem;
+  margin-top: 0rem;
+  padding-left: 0rem;
   text-align: left;
 }
 .footer-item-1{
@@ -776,6 +845,82 @@ justify-content: left;
   font-family: "Quicksand", sans-serif;
   margin-bottom: 1.7rem;
 }
+.footer-item-3{
+  margin-top: 1rem;
+}
+.underline-text {
+  text-decoration: underline;
+  text-underline-offset: 6px; /* Adjust this value for desired spacing */
+}
+.footer{
+  padding: 0 0px;
+}
+.fa-envelope:hover{
+  color: black !important
+}
+.fa-behance:hover{
+  color: black !important
+}
+.fa-linkedin:hover{
+  color: black !important
+}
+.fa-instagram:hover{
+  color: black !important
+}
+#footer-bodycopy:hover{
+  color: black !important
+}
+#footer-bodycopy4:hover{
+  color: black !important
+}
+#footer-bodycopy5:hover{
+  color: black !important
+}
+#footer-bodycopy2:hover{
+  color: black !important
+}
+.footer-bodycopy4, .footer-bodycopy5 {
+  color: #E6693D; /* Default text color */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.footer-bodycopy4:hover, .footer-bodycopy5:hover {
+  color: black !important; /* Change text color on hover */
+}
+
+/* Change arrow color on hover */
+.footer-bodycopy4:hover i, .footer-bodycopy5:hover i {
+  color: black; /* Change arrow color to black on hover */
+}
+
+/* Optional: Set the arrow color to match the text by default */
+.no-color-change {
+  color: inherit; /* Inherit the color from the parent */
+  transition: color 0.07s ease; /* Smooth transition for arrow color */
+}
+.footer-heading-static{
+  padding-bottom: 1rem;
+}
+.footer-bodycopy4{
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.57rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  line-height: 1.3rem;
+  font-weight:400
+}
+@media (min-width: 468px) {
+  .footer-bodycopy4{
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-right: 15vh;
+    line-height: 2rem;
+    font-weight:400
+  }
+}
+
 /* Project Page 
 
 ██████  ██████   ██████       ██ ███████  ██████ ████████     ██████   █████   ██████  ███████ 
@@ -982,6 +1127,28 @@ nav ul.branding-navigation li a:hover {
   text-underline-offset: 4px; /* Optional: Adjust underline spacing */
   color: #E6693D; /* Change color if necessary */
 }
+.custom-navigation2.active{
+  text-decoration: underline; /* Adds underline */
+  text-decoration-thickness: 2px; /* Adjust thickness if needed */
+  text-underline-offset: 4px; /* Optional: Adjust underline spacing */
+  color: #E6693D; /* Change color if necessary */
+}
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 3px; /* Adjust the thickness */
+  text-underline-offset: 6px; /* Adjust the offset */
+}
+.menu-item:hover {
+  color: black; /* Change text color on hover */
+  text-decoration-color: black; /* Change underline color on hover */
+  color: black !important
+}
+.close-btn:hover{
+  color: black !important
+}
+.menu-icon:hover{
+  color: black !important
+}
 /* Define the animation */
 @keyframes slideUp {
   0% {
@@ -1182,6 +1349,7 @@ nav ul.branding-navigation li a:hover {
 
 /* Default styles for small devices */
 @media (min-width: 200px) {
+
   html, body {
     margin: 0;
     padding: 0;
@@ -1242,7 +1410,7 @@ h3 {
   padding: 0 0;
 }
 }
-@media (max-width: 468px) {
+@media (min-width: 400px) {
   .hero-headline-wrapper{
 padding: 0 0rem;
   }
@@ -1250,15 +1418,49 @@ padding: 0 0rem;
     padding: 0 0rem;
   }
 .typewriter{
-  font-size: 3.2rem;
+  font-size: 3.3rem;
   margin-bottom: 0rem;
   padding-bottom: 0rem;
   text-align: center;
   height: 4.6rem;
 }
+.link-button{
+  font-size: 1.5rem;
+}
 h3 {
   font-size: 1.5rem;
-  padding: 0 2vh;
+  padding: 0 4vh;
+  line-height: 1.85rem;
+  margin-bottom: 0rem;
+  text-align: center;
+  margin-left: 0;
+}
+.link-button{
+  font-size: 1.5rem;
+  line-height: 1.85rem;
+  text-align: center;
+}
+}
+@media (min-width: 600px) {
+  .hero-headline-wrapper{
+padding: 0 0rem;
+  }
+.grid{
+    padding: 0 0rem;
+  }
+.typewriter{
+  font-size: 3.3rem;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
+  text-align: center;
+  height: 4.6rem;
+}
+.link-button{
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+  padding: 0 5vh;
   line-height: 1.85rem;
   margin-bottom: 0rem;
   text-align: center;
@@ -1271,20 +1473,43 @@ h3 {
 }
 }
 /* Typewriting animation for h3 on mobile devices */
-
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .link-button{
+    font-size: 1.5rem;
+  }
   h3 {
-    font-size: 1.57rem;
+    font-size: 1.5rem;
     padding: 0 5vw; /* Responsive padding */
     line-height: 1.9rem;
     margin-bottom: 0;
+  }
+  .typewriter{
+    font-size: 3.3rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+    text-align: center;
+    height: 4.6rem;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .overlay-text {
+    color: #FFF8F0; /* Text color */
+    font-size: 3rem; /* Adjust size as needed */
+    font-family: "Paytone One", sans-serif;
+    text-align: center; /* Center the text */
+   
+  }
+  .additional-text {
+    font-family: "Quicksand", sans-serif;
+    font-size: 2rem; /* Adjust font size as needed */
+    color: #E6693D; /* Change color as desired */
+    margin-top:0.75rem; /* Space between the overlay text and additional text */
+    text-align: center;
+    
+  }
   .work-page .portfolio .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates 3 equal-width columns */
@@ -1304,10 +1529,12 @@ h3 {
     font-size: 4.4rem;
     margin-bottom: 0.6rem;
   }
-
+  .link-button{
+    font-size: 1.5rem;
+  }
   h3 {
-    font-size: 1.57rem;
-    padding: 0 5vw; /* Responsive padding */
+    font-size: 1.5rem;
+    padding: 0 10vw; /* Responsive padding */
     line-height: 2rem;
     margin-bottom: 0;
   }
@@ -1433,9 +1660,12 @@ h3 {
   font-size: 4rem;
   height: 4.95rem;
 }
+.link-button{
+  font-size: 1.5rem;
+}
   h3 {
     font-size: 1.5rem;
-    padding: 0 3vw; /* Responsive padding */
+    padding: 0 5vw; /* Responsive padding */
   }
 }
 
@@ -1443,7 +1673,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.5rem;
+  }
   h3 {
     font-size: 1.5rem;
 
@@ -1454,7 +1686,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.5rem;
+  }
   h3 {
     font-size: 1.5rem;
     padding: 0 3vw; /* Responsive padding */
@@ -1464,7 +1698,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.5rem;
+  }
   h3 {
     font-size: 1.5rem;
     padding: 0 8vw; /* Responsive padding */
@@ -1474,17 +1710,23 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     padding: 0 10vw; /* Responsive padding */
+    font-size: 1.57rem;
   }
 }
 @media (min-width: 1230px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
+    font-size: 1.57rem;
     padding: 0 12vw; /* Responsive padding */
   }
 }
@@ -1492,8 +1734,11 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
+    font-size: 1.57rem;
     padding: 0 12vw; /* Responsive padding */
   }
 }
@@ -1501,8 +1746,11 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
+    font-size: 1.57rem;
     padding: 0 13vw; /* Responsive padding */
   }
 }
@@ -1510,7 +1758,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 14vw; /* Responsive padding */
@@ -1520,7 +1770,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 15vw; /* Responsive padding */
@@ -1530,7 +1782,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 15vw; /* Responsive padding */
@@ -1540,7 +1794,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 16vw; /* Responsive padding */
@@ -1550,7 +1806,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 16vw; /* Responsive padding */
@@ -1570,7 +1828,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 17vw; /* Responsive padding */
@@ -1580,7 +1840,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 18vw; /* Responsive padding */
@@ -1590,7 +1852,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 19vw; /* Responsive padding */
@@ -1600,7 +1864,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 20vw; /* Responsive padding */
@@ -1610,7 +1876,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 21vw; /* Responsive padding */
@@ -1620,7 +1888,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 21vw; /* Responsive padding */
@@ -1630,7 +1900,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 21vw; /* Responsive padding */
@@ -1641,7 +1913,9 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+  .link-button{
+    font-size: 1.57rem;
+  }
   h3 {
     font-size: 1.57rem;
     padding: 0 21.5vw; /* Responsive padding */
@@ -1652,9 +1926,29 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-
+.link-button{
+  font-size: 1.57rem;
+}
   h3 {
     font-size: 1.57rem;
     padding: 0 23vw; /* Responsive padding */
   }
 }
+@media (min-width: 768px) {
+  /* Hide mobile nav on larger screens */
+  .menu-icon {
+      display: none; /* Hide mobile menu */
+  }
+
+}
+
+@media (max-width: 767px) {
+  /* Hide desktop nav on smaller screens */
+  .desktop {
+      display: none; /* Hide desktop menu */
+  }
+  .menu-item2{
+    text-decoration: underline;
+  }
+}
+ 
