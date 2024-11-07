@@ -19,13 +19,6 @@
     }
   </style>
   <style>
-        /* Initial styling for the logo image */
-        .logo img {
-            transition: opacity 1s ease-in-out; /* Add a smooth fade transition */
-            opacity: 1; /* Make sure the logo starts visible */
-        }
-    </style>
-  <style>
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -129,7 +122,7 @@
   <header class="hero-header">
     <div class="logo">
       <a href="index.html">
-        <img id="logo" src="assets/branding-images/logo-orange.svg" alt="Shruti Karthikeyan Logo">
+        <img src="assets/branding-images/middlelogo.svg" alt="Shruti Karthikeyan Logo">
       </a>
     </div>
     <nav class="navbar">
@@ -377,29 +370,6 @@
     navLinks.classList.toggle("show"); // Toggle the show class to display the menu
 }
 </script>
-<script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Array of SVG file paths
-            const logos = [
-                'assets/branding-images/logo-orange.svg', 
-                'assets/branding-images/logo-blue.svg', 
-                'assets/branding-images/logo-green.svg'
-            ]; 
-
-            let currentIndex = 0; // Start with the first logo
-
-            // Function to change the logo every 5 seconds
-            function changeLogo() {
-                currentIndex = (currentIndex + 1) % logos.length; // Cycle through the logos
-                const logoElement = document.getElementById('logo'); // Get the image element
-                logoElement.src = logos[currentIndex]; // Update the source of the image
-            }
-
-            // Change the logo every 5 seconds (5000 milliseconds)
-            setInterval(changeLogo, 5000);
-        });
-    </script>
-
 
 <script>
   const menuIcon = document.getElementById('menu-icon');
@@ -423,7 +393,6 @@
         }
       });
   </script>
-  
 </body>
 
 </html>
