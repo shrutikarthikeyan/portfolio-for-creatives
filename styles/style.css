@@ -626,6 +626,7 @@ a:active {
   position: relative;
   overflow: hidden; /* Ensures the overlay doesn't extend outside the image */
   border-radius: 20px;
+  object-fit: cover;
 }
 .overlay{
   border-radius: 20px!important
@@ -2771,7 +2772,7 @@ h3 {
 }
   h3 {
     font-size: 1.57rem;
-    padding: 0 23vw; /* Responsive padding */
+    padding: 0 17.5vw; /* Responsive padding */
   }
 }
 @media (min-width: 768px) {
@@ -2790,6 +2791,139 @@ h3 {
   .menu-item2{
     text-decoration: underline;
   }
+}
+.image-container2 {
+  position: absolute; /* Fill the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container2 img {
+  width: 100%; /* Cover the container */
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.image-container2 {
+  z-index: -1; /* Place it behind other content */
+}
+.image-container2 img {
+  display: block; /* Removes the bottom space/gap */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}  
+.overlay2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Black background with transparency */
+  display: flex; /* Center text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.image-container2:hover .overlay2{
+  opacity: 1; /* Show overlay on hover */
+}
+
+.image-container2:hover img {
+  opacity: 0.75; /* Darken image on hover */
+}
+
+.overlay-text2{
+  color: #FFF8F0; /* Text color */
+  font-size: 3rem; /* Adjust size as needed */
+  font-family: "Paytone One", sans-serif;
+  text-align: center; /* Center the text */
+ 
+}
+.additional-text2{
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #E6693D; /* Change color as desired */
+  margin-top:0.75rem; /* Space between the overlay text and additional text */
+  text-align: center;
+  
+}
+
+
+/* INDEX CODE */
+
+.introimage-container {
+  position: relative;
+  overflow: hidden; /* Ensures the overlay doesn't extend outside the image */
+  border-radius: 0px;
+  object-fit: cover;
+}
+.introoverlay{
+  border-radius: 0px!important
+}
+.introimage-container img {
+  display: block; /* Removes the bottom space/gap */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  border-radius: 0px!important
+}
+
+  
+.introoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Black background with transparency */
+  display: flex; /* Center text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  opacity: 0; /* Initially hidden */
+  border-radius: 0px!important;
+  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.introimage-container:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.introimage-container:hover img {
+  opacity: 0.75; /* Darken image on hover */
+}
+
+.introoverlay-text {
+  color: #FFF8F0; /* Text color */
+  font-size: 3rem; /* Adjust size as needed */
+  font-family: "Paytone One", sans-serif;
+  text-align: center; /* Center the text */
+ 
+}
+.introadditional-text {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #E6693D; /* Change color as desired */
+  margin-top:0.75rem; /* Space between the overlay text and additional text */
+  text-align: center;
+  
+}
+.work-wrapper2{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.grid2{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.introimage-container img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
 
 
