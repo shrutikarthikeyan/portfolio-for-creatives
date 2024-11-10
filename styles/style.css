@@ -2925,5 +2925,11 @@ h3 {
   height: 100vh;
   object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
+.newimage-container-row {
+  display: flex;
+  gap: 20px; /* Optional: adds space between the images */
+  justify-content: center; /* Optional: centers the images */
+}
+
 
 
