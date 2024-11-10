@@ -20,42 +20,53 @@
     .newimage-container-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  gap: 0px; /* Optional: adds space between the columns */
+  gap: 20px; /* Optional: adds space between the columns */
+  justify-items: center; /* Centers the items horizontally within their grid cell */
+  margin: 0 0;
+  padding-bottom: 20px;
+}
+.newimage-container-rowbottom{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Optional: adds space between the columns */
   justify-items: center; /* Centers the items horizontally within their grid cell */
   margin: 0 0;
   padding-bottom: 3%;
 }
-.threenewimage-container-row {
+.newimage-container-rowgap {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Two equal columns */
-  gap: 0px; /* Optional: adds space between the columns */
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Optional: adds space between the columns */
   justify-items: center; /* Centers the items horizontally within their grid cell */
   margin: 0 0;
-  padding-bottom: 0%;
+  padding-bottom: 3%;
+}
+@media (max-width: 768px){
+  .newimage-container-rowgap{
+  padding-bottom: 30px;
+}
+}
+.newimage-containergap{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20px;
 }
 .column1-container{
   padding-left: 10%;
-  padding-right: 1.5%;
+  padding-right: 0%;
 }
 .column2-container{
   padding-right: 10%;
-  padding-left: 1.5%;
+  padding-left: 0%;
 }
-.column13-container{
-  margin-left: 0%;
-  
-}
-.column23-container{
-  margin-left:  0%;
-  margin-right: 0%;
-  
-}
-.column33-container{
-  margin-right: 0%;
 
-}
 .newimage-container{
   padding-bottom: 3%;
+}
+@media (max-width: 768px){
+  .newimage-container{
+  padding-bottom: 30px;
+}
 }
 .onenewimage-container{
   padding-left: 0%;
@@ -79,6 +90,15 @@
 /* Mobile layout */
 @media (max-width: 768px) { /* Adjust the width as needed for your mobile breakpoint */
     .newimage-container-row {
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-container-rowbottom{
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-container-rowgap {
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-containergap {
         display: block; /* Stacks items vertically */
     }
     .column1-container{
@@ -269,7 +289,7 @@
     offers products that promote relaxation and emotional balance. Their target audience—women aged 20-39—value wellness and personal growth but are slow to trust such product safety and effectiveness.
     </h3>
 </div>
-<div class="newimage-container-row">
+<div class="newimage-container-rowgap">
   <div class="column1-container">
     <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-stressed-out-type.jpg" alt="Describe your project">
   </div>
@@ -293,8 +313,13 @@
     <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-mobile-version3.jpg" alt="Describe your project">
   </div>
 </div>
-<div class="newimage-container">
-  <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-mobile-version2.jpg" alt="Describe your project">
+<div class="newimage-container-rowgap">
+  <div class="column1-container">
+    <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-mobile-version2.jpg" alt="Describe your project">
+  </div>
+  <div class="column2-container">
+    <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-desktop-version.jpg" alt="Describe your project">
+  </div>
 </div>
   <div class="freshhero-headline-wrapper">
     <h3 class="freshproject-titleoverview">Illustrations</h3>
@@ -302,7 +327,7 @@
       The illustrations embody a transformative process, capturing the shift in emotions from anxiety and reflection to confidence and clarity, ultimately leading to a dream-like world and a balanced emotional state that Calm's supplements help achieve.​​​​​​​
       </h3>
   </div>
-  <div class="newimage-container-row">
+  <div class="newimage-container-rowgap">
     <div class="column1-container">
       <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-anxious-illustration.jpg" alt="Describe your project">
     </div>
@@ -341,7 +366,7 @@
     <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-process-work-mood-board.jpg" alt="Describe your project">
   </div>
 </div>
-<div class="newimage-container-row">
+<div class="newimage-container-rowgap">
   <div class="column1-container">
     <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-colour-palette-brand-guideline.jpg" alt="Describe your project">
   </div>
@@ -355,10 +380,10 @@
     I created over 30 sketches to explore the emotions of anxiety, reflection, confidence, and calm, experimenting with poses, expressions, and composition. The final selection shown highlights the strongest ideas.
     </h3>
 </div>
-<div class="newimage-container">
+<div class="newimage-containergap">
   <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-concept-sketches-process-work.gif" alt="Describe your project">
 </div>
-<div class="newimage-container-row">
+<div class="newimage-container-rowbottom">
   <div class="column1-container">
     <img src="assets/PROJECT 1/shruti-karthikeyan-graphic-designer-natural-vitality-calm-website-design-illustration-brand-identity-process-sketches-desktop.jpg" alt="Describe your project">
   </div>
