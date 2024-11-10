@@ -1575,8 +1575,99 @@ margin-bottom: 0.5rem;
       margin-bottom: 0;
     }
 }
-
-/* Project Page 
+.footer-bodycopy{
+  text-decoration: underline!important
+  
+}
+.footer-bodycopy{
+  color: #FFF8F0!important
+  
+}
+.footer-bodycopy4{
+  color: #FFF8F0!important
+}
+.footer-bodycopy5{
+  color: #FFF8F0!important
+}
+.footer-bodycopy22.underline{
+  color: #FFF8F0;
+  text-decoration: underline;
+}
+.footer-bodycopy2.hoverable{
+  color: #FFF8F0;
+}
+.work{
+  margin-bottom: 5%;
+}
+.about2{
+  margin-bottom: 0%;
+}
+.rodeo{
+  margin-bottom: 2%;
+}
+.rodeo3{
+  margin-bottom: 0%;
+}
+.experience{
+  margin-bottom: 2%;
+}
+.experience2{
+  margin-bottom: 0%;
+}
+.calm{
+  margin-bottom: 2%;
+}
+.heights{
+  margin-bottom: 0%;
+}
+.featured-work{
+  margin-top: 8.5%;
+}
+@media (max-width: 1400px){
+  .featured-work{
+    margin-top: 1.5%;
+  }
+  .footer-links{
+    margin-top:  1%;
+  }
+  .work{
+    margin-bottom: 3%;
+  }
+  .about2{
+    margin-bottom: 1.5%;
+  }
+  .rodeo{
+    margin-bottom: 1%;
+  }
+  .rodeo3{
+    margin-bottom: 0%;
+  }
+  .experience{
+    margin-bottom: 1%;
+  }
+  .experience2{
+    margin-bottom: 0%;
+  }
+  .calm{
+    margin-bottom: 1%;
+  }
+  .heights{
+    margin-bottom: 0%;
+  }
+  .footer-bodycopy3{
+    margin-top: 3%;
+  }
+}
+@media (max-width: 768px){
+  .featured-work{
+    margin-top: 3%;
+  }
+  .footer-links{
+    margin-top: 3%;
+  }
+}
+/* 
+Project Page 
 
 ██████  ██████   ██████       ██ ███████  ██████ ████████     ██████   █████   ██████  ███████ 
 ██   ██ ██   ██ ██    ██      ██ ██      ██         ██        ██   ██ ██   ██ ██       ██      
