@@ -17,8 +17,139 @@
     * {
       transition: color 0.5s ease, background-color 0.5s ease;
     }
-  </style>
-  <style>
+    .newimage-container-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Optional: adds space between the columns */
+  justify-items: center; /* Centers the items horizontally within their grid cell */
+  margin: 0 0;
+  padding-bottom: 20px;
+}
+.newimage-container-rowbottom{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Optional: adds space between the columns */
+  justify-items: center; /* Centers the items horizontally within their grid cell */
+  margin: 0 0;
+  padding-bottom: 3%;
+}
+.newimage-container-rowgap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Optional: adds space between the columns */
+  justify-items: center; /* Centers the items horizontally within their grid cell */
+  margin: 0 0;
+  padding-bottom: 3%;
+}
+@media (max-width: 768px){
+  .newimage-container-rowgap{
+  padding-bottom: 30px;
+}
+}
+.newimage-containergap{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20px;
+}
+.column1-container{
+  padding-left: 10%;
+  padding-right: 0%;
+}
+.column2-container{
+  padding-right: 10%;
+  padding-left: 0%;
+}
+
+.newimage-container{
+  padding-bottom: 3%;
+}
+@media (max-width: 768px){
+  .newimage-container{
+  padding-bottom: 30px;
+}
+}
+.onenewimage-container{
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0;
+  padding-bottom: 3%;
+}
+.illusfreshhero-headline-wrapper{
+  padding-left: 5%;
+}
+.newfreshproject-title{
+  text-align: left;
+  padding-bottom: 2%;
+}
+.page-buttons{
+  display: block;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: right
+}
+/* Mobile layout */
+@media (max-width: 768px) { /* Adjust the width as needed for your mobile breakpoint */
+    .newimage-container-row {
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-container-rowbottom{
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-container-rowgap {
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-containergap {
+        display: block; /* Stacks items vertically */
+    }
+    .column1-container{
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 3%;
+    }
+    .column2-container{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .newimage-container{
+      display: block;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+}
+.figma-container {
+    position: relative;
+
+    padding-top: 56.25%; /* Aspect ratio: 16:9. Adjust as needed */
+  
+}
+
+.figma-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 5%;
+    padding-bottom: 3%;
+    padding-right: 5%;
+    width: 100%;
+    height: 100%;
+    border: none;
+  
+}
+
+/* Optional: Adjust aspect ratio on mobile */
+@media (max-width: 768px) {
+    .figma-container {
+        padding-top: 100%; /* Makes it square on smaller screens */
+    }
+}
+
+</style>
+
+<style>
+  .page-buttons{
+    display: flex;
+    justify-content: space-between;
+  }
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -72,7 +203,7 @@
         font-weight: 400;
         font-size: 45px;
         text-decoration: none;
-        padding-top: 5rem;
+        margin-top: 5rem;
     }
     .menu-item.underline {
     text-decoration: underline; /* Apply underline only for WORK */
@@ -97,11 +228,6 @@
 .menu:hover {
     color: black; /* Change color to black on hover */
 }
-
-
-
-
-
     .close-btn {
         position: absolute;
         top: 27px;
@@ -110,8 +236,51 @@
         color: #E6693D;
         cursor: pointer;
     }
-
+    .newimage-container{
+  display: flex;
+  justify-content: center;
+}
     /* Add your additional styles here */
+
+    @media (max-width: 768px) {
+  .newimage-container {
+    display: flex;
+    justify-content: center;
+  }
+  .newimage-container img {
+    width: 100vh!important /* Make the image full width */
+; /* Maintain aspect ratio */
+  }
+}
+
+.freshproject-title{
+  color: black!important
+}
+.challenge-solution-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 0px; /* Space between the columns */
+  padding-left: 2.5%; /* Add padding on left and right */
+  padding-right: 2.5%;
+  padding-bottom: 3%;
+}
+
+.challenge-section, .solution-section {
+  padding: 0px; /* Optional: adds padding within each section */
+}
+
+@media (max-width: 768px) {
+  .challenge-solution-container {
+    grid-template-columns: 1fr; /* Stacks sections on mobile */
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+  .challenge-section{
+    padding-bottom: 30px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -150,25 +319,39 @@
     <h3 class="seefreshproject-titleoverview">Heights Seasonal Posters</h3>
     <h3 class="seefreshproject-title">ILLUSTRATION | POSTER DESIGN</h3>
  </div>
-
   <div class="freshhero-headline-wrapper">
     <h3 class="freshproject-titleoverview">Project Overview</h3>
-    <h3 class="freshproject-title"><span class="bold">Client:</span> Heights Merchants Association</h3>
+    <a href=https://www.burnabyheights.com/ class="freshproject-title"><span class="bold">Client:</span> Heights Merchants Association</a>
     <h3 class="freshproject-title"><span class="bold">Location:</span> Burnaby, BC, Canada.</h3>
     <h3 class="freshproject-title"><span class="bold">Scope:</span> To develop a series of posters celebrating popular neighbourhood events such as Halloween on the Heights, Deck the Heights, and Lunar New Year. </h3>
  </div>
   </div>
-<main class="newwork-wrapper">
+  <div class="newimage-container">
+    <img src="assets/PROJECT 2/shruti-karthikeyan-graphic-designer-idea-grad-2025-heights-seasonal-posters-poster-design-capilano-university-idea-school-of-design.gif" alt="Describe your project"
+    style="width: 100%; height: 100%;">
+  </div>
+  <div class="challenge-solution-container">
+    <div class="challenge-section">
+      <h3 class="freshproject-titleoverview">The Challenge</h3>
+      <h3 class="freshproject-title">The Heights consists of over 350 businesses along Hastings Street. However, in recent years, these businesses have been losing customers to new shopping malls emerging around the district.</h3>
+    </div>
+    <div class="solution-section">
+      <h3 class="freshproject-titleoverview">The Solution</h3>
+      <h3 class="freshproject-title">I created posters that celebrate the unique community-focused spirit of the Heights. Each different event supported by local businesses reminds shoppers that the Heights’ is a different shopping experience, one that shopping malls cannot deliver.</h3>
+    </div>
+  </div>
 <div class="newimage-container">
-  <img src="assets/seasonalposters/porthalloween.jpg" alt="Describe your project">
+  <img src="assets/PROJECT 2/shruti-karthikeyan-graphic-designer-idea-grad-2025-heights-seasonal-posters-halloween-on-the-heights-poster-capilano-university-idea-school-of-design.jpg" alt="Describe your project"
+  style="width: 40%; height: 40%;" >
 </div>
 <div class="newimage-container">
-  <img src="assets/seasonalposters/portdeck.jpg" alt="Describe your project">
+  <img src="assets/PROJECT 2/shruti-karthikeyan-graphic-designer-idea-grad-2025-heights-seasonal-posters-deck-the-heights-christmas-poster-capilano-university-idea-school-of-design.jpg" alt="Describe your project"
+  style="width: 40%; height: 40%;">
 </div>
 <div class="newimage-container">
-  <img src="assets/seasonalposters/portlunar.jpg" alt="Describe your project">
+  <img src="assets/PROJECT 2/shruti-karthikeyan-graphic-designer-idea-grad-2025-heights-seasonal-posters-lunar-new-year-year-of-the-snake-poster-capilano-university-idea-school-of-design.jpg" alt="Describe your project"
+  style="width: 40%; height: 40%;">
 </div>
-
  <!-- Add navigation buttons here -->
  <div class="page-buttons">
   <a href="maladh-syrian-cuisine.html" class="page-button prev-button">&lt; PREVIOUS PAGE</a>

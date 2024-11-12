@@ -17,8 +17,135 @@
     * {
       transition: color 0.5s ease, background-color 0.5s ease;
     }
-  </style>
-  <style>
+    .newimage-container-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Optional: adds space between the columns */
+  justify-items: center; /* Centers the items horizontally within their grid cell */
+  margin: 0 0;
+  padding-bottom: 20px;
+}
+.newimage-container-rowbottom{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Optional: adds space between the columns */
+  justify-items: center; /* Centers the items horizontally within their grid cell */
+  margin: 0 0;
+  padding-bottom: 3%;
+}
+.newimage-container-rowgap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Optional: adds space between the columns */
+  justify-items: center; /* Centers the items horizontally within their grid cell */
+  margin: 0 0;
+  padding-bottom: 3%;
+}
+@media (max-width: 768px){
+  .newimage-container-rowgap{
+  padding-bottom: 30px;
+}
+}
+.newimage-containergap{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20px;
+}
+.column1-container{
+  padding-left: 10%;
+  padding-right: 0%;
+}
+.column2-container{
+  padding-right: 10%;
+  padding-left: 0%;
+}
+
+.newimage-container{
+  padding-bottom: 3%;
+}
+@media (max-width: 768px){
+  .newimage-container{
+  padding-bottom: 30px;
+}
+}
+.onenewimage-container{
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0;
+  padding-bottom: 3%;
+}
+.illusfreshhero-headline-wrapper{
+  padding-left: 5%;
+}
+.newfreshproject-title{
+  text-align: left;
+  padding-bottom: 2%;
+}
+.page-buttons{
+  display: block;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: right
+}
+/* Mobile layout */
+@media (max-width: 768px) { /* Adjust the width as needed for your mobile breakpoint */
+    .newimage-container-row {
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-container-rowbottom{
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-container-rowgap {
+        display: block; /* Stacks items vertically */
+    }
+    .newimage-containergap {
+        display: block; /* Stacks items vertically */
+    }
+    .column1-container{
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 3%;
+    }
+    .column2-container{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .newimage-container{
+      display: block;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+}
+.figma-container {
+    position: relative;
+
+    padding-top: 56.25%; /* Aspect ratio: 16:9. Adjust as needed */
+  
+}
+
+.figma-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 5%;
+    padding-bottom: 3%;
+    padding-right: 5%;
+    width: 100%;
+    height: 100%;
+    border: none;
+  
+}
+
+/* Optional: Adjust aspect ratio on mobile */
+@media (max-width: 768px) {
+    .figma-container {
+        padding-top: 100%; /* Makes it square on smaller screens */
+    }
+}
+
+</style>
+
+<style>
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -72,7 +199,7 @@
         font-weight: 400;
         font-size: 45px;
         text-decoration: none;
-        padding-top: 5rem;
+        margin-top: 5rem;
     }
     .menu-item.underline {
     text-decoration: underline; /* Apply underline only for WORK */
@@ -97,11 +224,6 @@
 .menu:hover {
     color: black; /* Change color to black on hover */
 }
-
-
-
-
-
     .close-btn {
         position: absolute;
         top: 27px;
@@ -110,7 +232,24 @@
         color: #E6693D;
         cursor: pointer;
     }
-
+    .newimage-container {
+    display: flex;
+    justify-content: center;
+    }
+    @media (max-width: 768px) {
+  .newimage-container {
+    display: flex;
+    justify-content: center;
+  }
+  .newimage-container img {
+    width: 100vh!important /* Make the image full width */
+; /* Maintain aspect ratio */
+  }
+}
+.page-buttons{
+display: flex;
+justify-content: space-between;
+}
     /* Add your additional styles here */
 </style>
 </head>
@@ -147,39 +286,71 @@
     </nav>
   </header>
   <div class="seefreshhero-headline-wrapper">
-    <h3 class="seefreshproject-titleoverview">Maladh - Syrian Cuisine</h3>
-    <h3 class="seefreshproject-title">BRAND IDENTITY | WEBSITE DESIGN </h3>
+    <h3 class="seefreshproject-titleoverview">Maladh Syrian Cuisine</h3>
+    <h3 class="seefreshproject-title">BRAND IDENTITY | WEBSITE DESIGN</h3>
  </div>
-
   <div class="freshhero-headline-wrapper">
     <h3 class="freshproject-titleoverview">Project Overview</h3>
-    <h3 class="freshproject-title"><span class="bold">Client:</span> Maladh</h3>
+    <h3 class="freshproject-title"><span class="bold">Client:</span> Maladh.</h3>
     <h3 class="freshproject-title"><span class="bold">Location:</span> Vancouver, BC, Canada.</h3>
     <h3 class="freshproject-title"><span class="bold">Scope:</span> Develop the brand identity of a non-profit restaurant that empowers Syrian refugees in Vancouver through food sharing, culinary training, stories and community. </h3>
+    <h3 class="freshproject-title"><span class="bold">Collaborators:</span> Illustration by Theo Samosir.</h3>
  </div>
   </div>
 <main class="newwork-wrapper">
 <div class="newimage-container">
-  <img src="assets/Maladh/maladh1.png" alt="Describe your project">
+  <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-restaurant-storefront-branding.jpg" alt="Describe your project">
+</div>
+<div class="freshhero-headline-wrapper">
+  <h3 class="freshproject-titleoverview">The Challenge</h3>
+  <h3 class="freshproject-title">Syrian refugees arriving in Canada often have a difficult time finding employment.  While many may be highly skilled. They typically encounter numerous obstacles, including a lack of resources and racism in the workplace. 
+    </h3>
+</div>
+<div class="newimage-container-rowgap">
+  <div class="column1-container">
+    <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-restaurant-logo-branding2.jpg" alt="Describe your project">
+  </div>
+  <div class="column2-container">
+    <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-restaurant-logo-branding.jpg" alt="Describe your project">
+  </div>
+</div>
+<div class="freshhero-headline-wrapper">
+  <h3 class="freshproject-titleoverview">The Solution</h3>
+  <h3 class="freshproject-title">To create employment opportunities for refugees through food preparation. Maladh, which means haven in Arabic, started off as a food truck that served Syrian dishes prepared by Syrian chefs. To increase Maladh’s impact, the restaurant started offering cooking classes for refugees. This not only provided them with a source of income but also fostered social connections. Maladh has now expanded into a six-month intensive program that helps refugees launch their own thriving culinary businesses.​​​​​​​
+    </h3>
 </div>
 <div class="newimage-container">
-  <img src="assets/Maladh/maladh2.png" alt="Describe your project">
+  <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-restaurant-food-truck-branding.jpg" alt="Describe your project">
+</div>
+<div class="figma-container">
+  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/fsYyFj0cZh9lfdNVk80ZP4/Website-Design?page-id=2895%3A29&node-id=2895-200&node-type=frame&viewport=479%2C1793%2C0.22&scaling=scale-down&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+</div>
+<div class="newimage-container-rowgap">
+  <div class="column1-container">
+    <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-restaurant-menu-design.jpg" alt="Describe your project">
+  </div>
+  <div class="column2-container">
+    <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-restaurant-menu-apron-design.jpg" alt="Describe your project">
+  </div>
 </div>
 <div class="newimage-container">
-  <img src="assets/Maladh/maladh3.png" alt="Describe your project">
+  <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-storefront-dish-branding.jpg" alt="Describe your project"
+  style="width: 40%; height: 40%;" >
 </div>
-<div class="newimage-container">
-  <img src="assets/Maladh/maladh4.png" alt="Describe your project">
-</div>
-<div class="newimage-container">
-  <img src="assets/Maladh/maladh5.png" alt="Describe your project">
-</div>
-<div class="newimage-container">
-  <img src="assets/Maladh/maladh6.png" alt="Describe your project">
-</div>
-<div class="newimage-container">
-  <img src="assets/Maladh/maladh7.png" alt="Describe your project">
-</div>
+  <div class="freshhero-headline-wrapper">
+    <h3 class="freshproject-titleoverview">Packaging</h3>
+    <h3 class="freshproject-title">
+      Maladh has two types of packaging, one for takeout and delivery and the other to be bought in grocery stores.​​​​​​​
+      </h3>
+  </div>
+  <div class="newimage-container-rowgap">
+    <div class="column1-container">
+      <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-restaurant-takeout-delivery-packaging-design.jpg" alt="Describe your project">
+    </div>
+    <div class="column2-container">
+      <img src="assets/PROJECT 4/shrutikarthikeyan-idea-grad-2025-maladh-syrian-cuisine-brand-identity-website-design-packaging-capilano-university-idea-school-of-design-restaurant-grocery-store-packaging-design.jpg" alt="Describe your project">
+    </div>
+  </div>
  <!-- Add navigation buttons here -->
  <div class="page-buttons">
   <a href="natural-vitality-calm.html" class="page-button prev-button">&lt; PREVIOUS PAGE</a>
