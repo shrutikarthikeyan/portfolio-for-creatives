@@ -110,7 +110,22 @@
         color: #E6693D;
         cursor: pointer;
     }
+    .newimage-container{
+  display: flex;
+  justify-content: center;
+}
+    /* Add your additional styles here */
 
+    @media (max-width: 768px) {
+  .newimage-container {
+    display: flex;
+    justify-content: center;
+  }
+  .newimage-container img {
+    width: 100vh!important /* Make the image full width */
+; /* Maintain aspect ratio */
+  }
+}
     /* Add your additional styles here */
 </style>
 </head>
@@ -158,13 +173,15 @@
   </div>
 <main class="newwork-wrapper">
   <div class="newimage-container">
-    <img src="assets/Illustration Cover/shruti-karthikeyan-idea-grad-2025-legacy-gaze-portrait-illustration-spot-illustration-subramanian-vaithilingam-tamil-nadu-mettur-grandfather-capilano-university-idea-school-of-design-illustration-project-cover.jpg" alt="Describe your project">
+    <img src="assets/Illustration Cover/shruti-karthikeyan-idea-grad-2025-legacy-gaze-portrait-illustration-spot-illustration-subramanian-vaithilingam-tamil-nadu-mettur-grandfather-capilano-university-idea-school-of-design-illustration-project-cover.jpg" alt="Describe your project"
+    style="width: 40%; height: 40%;" >
   </div>
 <div class="newimage-container">
   <img src="assets/about/legacy3.jpg" alt="Describe your project">
 </div>
 <div class="newimage-container">
-  <img src="assets/about/legacy2.jpg" alt="Describe your project">
+  <img src="assets/about/legacy2.jpg" alt="Describe your project"
+  style="width: 40%; height: 40%;" >
 </div>
  <!-- Add navigation buttons here -->
  <div class="page-buttons">

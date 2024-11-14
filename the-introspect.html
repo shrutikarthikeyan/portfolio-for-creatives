@@ -110,7 +110,28 @@
         color: #E6693D;
         cursor: pointer;
     }
+    .newimage-container{
+  display: flex;
+  justify-content: center;
+}
+    /* Add your additional styles here */
 
+    @media (max-width: 768px) {
+  .newimage-container {
+    display: flex;
+    justify-content: center;
+  }
+  .newimage-container img {
+    width: 100vh!important /* Make the image full width */
+; /* Maintain aspect ratio */
+  }
+}
+.page-buttons{
+  display: block;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: right
+}
     /* Add your additional styles here */
 </style>
 </head>
@@ -160,7 +181,8 @@
   </div>
 <main class="newwork-wrapper">
   <div class="newimage-container">
-    <img src="assets/Illustration Cover/shruti-karthikeyan-idea-grad-2025-capic-rodeo-16-top-10-illustration-the-introspect-portrait-illustration-capilano-university-idea-school-of-design-illustration-project-cover.jpg" alt="Describe your project">
+    <img src="assets/Illustration Cover/shruti-karthikeyan-idea-grad-2025-capic-rodeo-16-top-10-illustration-the-introspect-portrait-illustration-capilano-university-idea-school-of-design-illustration-project-cover.jpg" alt="Describe your project"
+    style="width: 40%; height: 40%;" >
   </div>
  <!-- Add navigation buttons here -->
  <div class="page-buttons">

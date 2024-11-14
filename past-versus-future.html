@@ -99,7 +99,22 @@
 }
 
 
+.newimage-container{
+  display: flex;
+  justify-content: center;
+}
+    /* Add your additional styles here */
 
+    @media (max-width: 768px) {
+  .newimage-container {
+    display: flex;
+    justify-content: center;
+  }
+  .newimage-container img {
+    width: 100vh!important /* Make the image full width */
+; /* Maintain aspect ratio */
+  }
+}
 
 
     .close-btn {

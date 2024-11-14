@@ -110,7 +110,22 @@
         color: #E6693D;
         cursor: pointer;
     }
+    .newimage-container{
+  display: flex;
+  justify-content: center;
+}
+    /* Add your additional styles here */
 
+    @media (max-width: 768px) {
+  .newimage-container {
+    display: flex;
+    justify-content: center;
+  }
+  .newimage-container img {
+    width: 100vh!important /* Make the image full width */
+; /* Maintain aspect ratio */
+  }
+}
     /* Add your additional styles here */
 </style>
 </head>
@@ -158,16 +173,20 @@
   </div>
 <main class="newwork-wrapper">
   <div class="newimage-container">
-    <img src="assets/Illustration Cover/shruti-karthikeyan-idea-grad-2025-smile-spectrum-series-portrait-illustration-spot-illustration-keshav-makker-capilano-university-idea-school-of-design-illustration-project-cover.jpg" alt="Describe your project">
+    <img src="assets/Illustration Cover/shruti-karthikeyan-idea-grad-2025-smile-spectrum-series-portrait-illustration-spot-illustration-keshav-makker-capilano-university-idea-school-of-design-illustration-project-cover.jpg" alt="Describe your project"
+    style="width: 50%; height: 50%;" >
   </div>
   <div class="newimage-container">
-    <img src="assets/about/laura.jpg" alt="Describe your project">
+    <img src="assets/about/laura.jpg" alt="Describe your project"
+    style="width: 50%; height: 50%;" >
   </div>
   <div class="newimage-container">
-    <img src="assets/about/puneet.jpg" alt="Describe your project">
+    <img src="assets/about/puneet.jpg" alt="Describe your project"
+    style="width: 50%; height: 50%;" >
   </div>
   <div class="newimage-container">
-    <img src="assets/about/fok.jpg" alt="Describe your project">
+    <img src="assets/about/fok.jpg" alt="Describe your project"
+    style="width: 50%; height: 50%;" >
   </div>
  <!-- Add navigation buttons here -->
  <div class="page-buttons">

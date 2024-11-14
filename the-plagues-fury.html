@@ -110,7 +110,22 @@
         color: #E6693D;
         cursor: pointer;
     }
+    .newimage-container{
+  display: flex;
+  justify-content: center;
+}
+    /* Add your additional styles here */
 
+    @media (max-width: 768px) {
+  .newimage-container {
+    display: flex;
+    justify-content: center;
+  }
+  .newimage-container img {
+    width: 100vh!important /* Make the image full width */
+; /* Maintain aspect ratio */
+  }
+}
     /* Add your additional styles here */
 </style>
 </head>
@@ -164,7 +179,12 @@
     <img src="assets/inferno/inferno22.jpg" alt="Describe your project">
   </div>
 <div class="newimage-container">
-  <img src="assets/inferno/portillus1.jpg" alt="Describe your project">
+  <img src="assets/inferno/portillus1.jpg" alt="Describe your project"
+  style="width: 40%; height: 40%;" >
+</div>
+<div class="newimage-container">
+  <img src="assets/inferno/shruti-karthikeyan-idea-grad-2025-inferno-book-cover-design-plagues-fury-process-work-concept-sketches.gif" alt="Describe your project"
+  style="width: 40%; height: 40%;" >
 </div>
  <!-- Add navigation buttons here -->
  <div class="page-buttons">
